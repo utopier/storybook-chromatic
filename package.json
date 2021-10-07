@@ -1,26 +1,75 @@
 {
-  "name": "storybook-chromatic",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+  "name": "utopier-ui-library",
+  "main": "./build/index.js",
+  "module": "./build/index.es.js",
+  "version": "0.0.0",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "desciprtion test",
+  "license": "MIT",
+  "author": "utopier2025@gmail.com",
+  "bugs": {
+    "url": "https://",
+    "email": "utopier2025@gmail.com"
+  },
+  "files": [
+    "/build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=5e47bbc83b76"
+  },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@storybook/addon-actions": "^6.3.10",
-    "@storybook/addon-essentials": "^6.3.10",
-    "@storybook/addon-links": "^6.3.10",
-    "@storybook/react": "^6.3.10",
-    "babel-loader": "^8.2.2"
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-image": "^2.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-docs": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "addon-screen-reader": "^1.8.6",
+    "babel": "^6.23.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
+    "babel-preset-react-app": "^10.0.0",
+    "chromatic": "^5.9.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "prettier": "2.3.2",
+    "rollup": "^2.56.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "storybook-addon-designs": "^6.1.0",
+    "storybook-addon-pseudo-states": "^1.0.0",
+    "storybook-dark-mode": "^1.0.8"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "styled-reset": "^4.3.4"
   }
 }
