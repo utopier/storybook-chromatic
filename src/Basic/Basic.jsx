@@ -1,50 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import styled from 'styled-components';
 
 /**
- * Primary UI component for user interaction
+ * Component summary title.
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Basic = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
+    <Button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </Button>
   );
 };
 
-Button.propTypes = {
+Basic.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * primary props description
    */
   primary: PropTypes.bool,
   /**
-   * What background color to use
+   * backgroundColor props description
    */
   backgroundColor: PropTypes.string,
   /**
-   * How large should the button be?
+   * size props description
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /**
-   * Button contents
+   * label props description
    */
   label: PropTypes.string.isRequired,
   /**
-   * Optional click handler
+   * onClick props description
    */
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
-Button.defaultProps = {
+// Component props default value
+Basic.defaultProps = {
   backgroundColor: null,
   primary: false,
-  size: 'medium',
-  onClick: undefined,
+  size: 'large',
+  onClick: undefined
 };
+
+const Button = styled.button``;
